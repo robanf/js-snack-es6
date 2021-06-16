@@ -41,19 +41,31 @@ document.getElementById("bici").innerHTML=
 
   let squadre=[
     {
-        nome='franco',
+        nome:'franco',
         punti:0,
         falli:0
     },
     {
-        nome='maurizio',
+        nome:'maurizio',
         punti:0,
         falli:0
     },
     {
-        nome='linobanfi',
+        nome:'linobanfi',
         punti:0,
         falli:0
     }
 
   ];
+
+
+
+const random=(min,max)=>Math.floor((Math.random()*max-min+1)+min);
+
+for(let j=0;j<squadre.length;j++){
+    squadre[j].punti=random(1,50);
+    squadre[j].falli=random(0,10);
+}
+
+
+console.log(squadre);
