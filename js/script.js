@@ -62,10 +62,15 @@ document.getElementById("bici").innerHTML=
 
 const random=(min,max)=>Math.floor((Math.random()*max-min+1)+min);
 
+let newarray=[];
+
 for(let j=0;j<squadre.length;j++){
     squadre[j].punti=random(1,50);
     squadre[j].falli=random(0,10);
+    newarray.push({nome:squadre[j].nome, falli:squadre[j].falli});
 }
 
 
 console.log(squadre);
+
+console.log(newarray);
